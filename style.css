@@ -1,0 +1,226 @@
+/* --- GLOBAL STYLES --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #2b2b36;
+    color: #ffffff;
+}
+
+.cursive-title {
+    font-family: 'Great Vibes', cursive;
+    font-size: 3.5rem;
+    color: #ffffff;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+
+.btn-teal {
+    background-color: #28b5b5;
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 25px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: 0.3s;
+}
+.btn-teal:hover { background-color: #1e8f8f; }
+
+/* --- NAVBAR --- */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background-color: #2b2b36;
+}
+.nav-links a {
+    color: #ccc;
+    text-decoration: none;
+    margin-right: 20px;
+    font-size: 0.9rem;
+}
+.nav-links a:hover { color: #28b5b5; }
+.logo { font-weight: 600; letter-spacing: 1px; }
+
+/* --- HERO SECTION --- */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.hero-text { flex: 1; padding-right: 20px; }
+.hero-text h2 { font-size: 1.2rem; letter-spacing: 2px; margin-bottom: 15px; }
+.hero-text p { color: #aaa; line-height: 1.6; margin-bottom: 20px; max-width: 400px; }
+.hero-image { flex: 1; text-align: right; }
+.hero-image img {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 50%; /* Makes image round if not transparent */
+}
+
+/* --- HOURS SECTION (Teal Background) --- */
+.hours-section {
+    background-color: #28b5b5;
+    text-align: center;
+    padding: 60px 20px;
+    position: relative;
+    margin: 50px 0;
+}
+.hours-content p { font-size: 1.1rem; margin-bottom: 15px; line-height: 1.8; color: #fff; }
+
+/* Wavy Borders using SVG-like CSS */
+.wave-top, .wave-bottom {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    background-size: cover;
+}
+.wave-top {
+    top: -49px;
+    background: url('data:image/svg+xml;utf8,<svg viewBox="0 0 1440 320" xmlns="http://www.w3.org/2000/svg"><path fill="%2328b5b5" fill-opacity="1" d="M0,224L80,213.3C160,203,320,181,480,181.3C640,181,800,203,960,213.3C1120,224,1280,224,1360,224L1440,224L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"></path></svg>');
+    background-repeat: no-repeat;
+}
+.wave-bottom {
+    bottom: -49px;
+    background: url('data:image/svg+xml;utf8,<svg viewBox="0 0 1440 320" xmlns="http://www.w3.org/2000/svg"><path fill="%2328b5b5" fill-opacity="1" d="M0,160L80,149.3C160,139,320,117,480,122.7C640,128,800,160,960,165.3C1120,171,1280,149,1360,138.7L1440,128L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z"></path></svg>');
+    background-repeat: no-repeat;
+}
+
+/* --- BRANCHES SECTION --- */
+.branches {
+    text-align: center;
+    padding: 50px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.branch-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+.branch-card {
+    background: #353542;
+    padding: 20px;
+    border-radius: 10px;
+}
+.branch-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+.branch-card h3 { color: #28b5b5; margin-bottom: 10px; }
+.branch-card p { color: #aaa; font-size: 0.9rem; }
+
+/* --- FOOTER --- */
+footer {
+    background-color: #1e1e26;
+    padding: 40px 50px;
+    margin-top: 50px;
+}
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.footer-info h4, .footer-contact h4 { color: #28b5b5; margin-bottom: 15px; }
+.footer-info p, .footer-contact p { color: #aaa; line-height: 1.8; font-size: 0.9rem; }
+
+/* ========================================== */
+/* CHATBOX STYLES (Matching the Dark Theme)   */
+/* ========================================== */
+#chatbox-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 350px;
+    height: 450px;
+    background: #353542; /* Dark background */
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.5);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#chat-header {
+    background: #28b5b5; /* Teal accent */
+    color: white;
+    padding: 12px;
+    font-weight: bold;
+    text-align: center;
+}
+
+#chat-messages {
+    flex: 1;
+    padding: 10px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.message {
+    padding: 8px 12px;
+    border-radius: 8px;
+    max-width: 80%;
+    word-wrap: break-word;
+    font-size: 0.9rem;
+}
+
+.user-message {
+    background: #28b5b5;
+    color: white;
+    align-self: flex-end;
+    border-bottom-right-radius: 2px;
+}
+
+.ai-message {
+    background: #4a4a5a; /* Darker grey for AI */
+    color: white;
+    align-self: flex-start;
+    border-bottom-left-radius: 2px;
+}
+
+#chat-input-area {
+    display: flex;
+    padding: 10px;
+    border-top: 1px solid #444;
+    background: #2b2b36;
+}
+
+#chat-input {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #555;
+    background: #444;
+    color: white;
+    border-radius: 4px;
+    outline: none;
+}
+
+#send-button {
+    margin-left: 8px;
+    padding: 8px 15px;
+    background: #28b5b5;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
